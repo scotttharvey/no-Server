@@ -1,0 +1,20 @@
+body {
+  background-color: #565B5E;
+}
+header{
+  width: 100vw;
+  height: 14em;
+  /*border: red 2px solid;*/
+  background-color: #2E3133;
+}
+.pic{
+  height:12em;;
+  width: 13em;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.stuff{
+  display: flex;
+  justify-content: center;
+}

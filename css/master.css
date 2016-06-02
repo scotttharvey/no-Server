@@ -1,20 +1,29 @@
 body {
   background-color: #565B5E;
 }
-header{
+.carousel-container {
   width: 100vw;
   height: 14em;
   /*border: red 2px solid;*/
   background-color: #2E3133;
+  display: flex;
+  align-items: center;
+}
+.carousel{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .pic{
-  height:12em;;
-  width: 13em;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
+  height:12em;
+  width: 12em;
+  border-radius: 15px;
+  object-fit: cover;
+  transform: translateX(50%);
 }
 .stuff{
   display: flex;
   justify-content: center;
+  align-items: center;
 }

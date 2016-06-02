@@ -1,14 +1,14 @@
 angular.module('app').service('service', function($http) {
 
 
-   this.kitShit= function(){
+   this.apiPhotos= function(){
 
     return $http({
       method: 'GET',
-      url: 'http://thecatapi.com/api/images/get?format=html&results_per_page=50'
+      url: 'http://www.splashbase.co/api/v1/images/latest'
     }).then(function (response){
       console.log("hello?", response);
-      return response;
+      return response.data.images;
     })
 };
 

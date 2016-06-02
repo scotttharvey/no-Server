@@ -9,36 +9,23 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 </head>
 <body>
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a ui-sref="home">Home</a></li>
+        <!-- <li class="tutorials"><a class="active" href="#">Tutorials</a></li> -->
+        <li class="about"><a ui-sref="picInfo">About</a></li>
+        <li class="news"><a ui-sref="addy">Add</a></li>
+        <!-- <li class="contact"><a href="#">Contact</a></li> -->
+      </ul>
+    </div>
+  </header>
 <main role="main">
 
-<div class="carousel-container">
-<div class="carousel">
-  <div >
-    <img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png?itok=Jxf0IlS4" class="pic" alt="" />
-  </div>
-  <div >
-    <img src="http://i.dailymail.co.uk/i/pix/2016/04/13/00/331D901800000578-3536787-image-a-11_1460503122350.jpg" class="pic" alt="" />
 
-  </div>
-  <div >
-    <img src="https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png" class="pic" alt="" />
 
-  </div>
-
-</div>
-
-</div>
-<nav>
-  <a ui-sref="home">Home</a>
-  <a ui-sref="addy">Add</a>
-  <a ui-sref="picInfo">Info</a>
-
-</nav>
-
-<section class="stuff">
   <ui-view></ui-view>
 
-</section>
 
 </main>
 

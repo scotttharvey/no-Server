@@ -7,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
+#smile-body{
+  background-color:#2E3133; 
+}
 .carousel-container {
   width: 100vw;
   height: 17em;
@@ -15,8 +18,25 @@ body {
   display: flex;
   align-items: center;
   overflow: scroll;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
 }
+.carousel-container-home {
+  width: 100vw;
+  height: 25em;
+  /*border: red 2px solid;*/
+  background-color: #2E3133;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  bottom: 0;
+
+}
+
 .carousel{
   display: flex;
   justify-content: space-around;
@@ -107,7 +127,7 @@ body {
   border: 1px solid #000;
   border-left: none;
   height: 65px;
-  width: 90px;
+  width: 130px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   font-size: 35px;
@@ -116,4 +136,22 @@ body {
   background-color: #818787;
   outline: none;
   margin-left: -4px;
+}
+.photos-body{
+  display: flex;
+  width: 100vw;
+  height: 35em;
+  /*border: red 2px solid;*/
+  margin-top: 10px;
+  background-color: #2E3133;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+.photos-body img{
+  margin: 20px;
 }

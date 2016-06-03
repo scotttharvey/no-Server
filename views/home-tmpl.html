@@ -1,4 +1,18 @@
-<div class="carousel-container">
+
+<section id="homeSearch">
+  <div class="search-bar">
+    <input class="search" placeholder="search" ng-model="search"></input>
+
+    <button class="addButton" ng-click="getPhotos(search)">Search</button>
+
+  </div>
+</section>
+<div class="">
+  <p>
+    SMILES :)
+  </p>
+</div>
+<div class="carousel-container-home">
 
     <div class="add-remove" ng-repeat="photo in apiPhotos">
         <img ng-src="{{photo.url}}" alt="" class="images" />
@@ -6,19 +20,11 @@
     </div>
 
 </div>
-<section id="homeSearch">
-  <div class="search-bar">
-    <input class="search" placeholder="search" ng-model="search"></input>
-
-    <button class="addButton" ng-click="getPhotos(search)">Add</button>
-
-  </div>
-</section>
-<section>
+<!-- <section class="photos-body">
 
   <div ng-repeat="random in randomPhotos">
     <img ng-src="{{random.url}}" class="images" />
 
   </div>
 
-</section>
+</section> -->

@@ -15,10 +15,10 @@ $stateProvider
     controller: "addyCtrl",
     templateUrl: "/views/addy-tmpl.html"
 })
-.state('picInfo', {
-  url: "/picInfo",
-    controller: "picInfoCtrl",
-    templateUrl: "/views/picInfo-tmpl.html"
+.state('smile', {
+  url: "/smile",
+    controller: "smileCtrl",
+    templateUrl: "/views/smile-tmpl.html"
 })
 
 })

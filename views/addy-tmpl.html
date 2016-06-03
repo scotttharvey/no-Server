@@ -1,11 +1,25 @@
-<h1>ADD NEW</h1>
-<section>
-    <input placeholder="insert-url" ng-model="search"></input>
+<div class="carousel-container">
 
+    <div class="add-remove" ng-repeat="photo in apiPhotos">
+        <img ng-src="{{photo.url}}" alt="" class="images" />
 
+    </div>
 
-    <button type="button" name="button">Upload</button>
+</div>
+<section id="homeSearch">
+  <div class="search-bar">
+    <input class="search" placeholder="search" ng-model="search"></input>
+
+    <button class="addButton" ng-click="getPhotos(search)">Search</button>
+
+  </div>
 </section>
-<section class="addPhoto-Body">
-    Uploaded Photo
+<section class="photos-body">
+
+  <div ng-repeat="random in randomPhotos" ng-click="addPhoto(random)">
+
+    <img ng-src="{{random.url}}" class="images" />
+
+  </div>
+
 </section>

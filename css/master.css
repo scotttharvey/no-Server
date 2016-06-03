@@ -83,26 +83,37 @@ body {
   }
   #homeSearch{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     padding-top: 9px;
   }
+
+  /*.search-bar {
+    display: flex;
+    align-items: baseline;
+  }*/
  .search{
-   height: 60px;
+   height: 62px;
    width: 350px;
+   border: 1px solid #000;
    border-top-left-radius: 30px;
    border-bottom-left-radius: 30px;
    font-size: 35px;
+   outline: none;
+   padding-left: 25px;
+   align-items: baseline;
  }
 .addButton{
-  height: 64px;
-  width: 80px;
+  border: 1px solid #000;
+  border-left: none;
+  height: 65px;
+  width: 90px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  font-size: 30px;
-  font-style: italic;
-  background-color: #878787;
-}
-.buttonText{
+  font-size: 35px;
   color: #6EBBC9;
+  font-style: oblique;
+  background-color: #818787;
+  outline: none;
+  margin-left: -4px;
 }

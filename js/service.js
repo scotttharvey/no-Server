@@ -7,19 +7,19 @@ angular.module('app').service('service', function($http) {
             method: 'GET',
             url: 'http://www.splashbase.co/api/v1/images/latest'
         }).then(function(response) {
-            console.log("hello?", response);
+            console.log("Most Recent", response);
             return response.data.images;
         })
     };
 
       this.randomPhotos = function(search){
-        console.log("sees");
+        // console.log("sees");
         return $http({
           method: "GET",
           url: "http://www.splashbase.co/api/v1/images/search?query=" + search
         }).then(function(result){
-          console.log("Made it", result);
-          return result.data;
+          console.log("Random Images", result);
+          return result.data.images;
         })
       }
 

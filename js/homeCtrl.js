@@ -6,10 +6,10 @@ angular.module('app').controller('homeCtrl', function($scope, $state, service) {
     });
 
 $scope.getPhotos = function(search){
-  console.log("pop");
-    service.randomPhotos(search).then(function(result) {
+  // console.log("pop");
+    service.randomPhotos($scope.search).then(function(result) {
         $scope.randomPhotos = result;
-        return $scope.randomPhotos;
+        // return $scope.randomPhotos;
     });
   }
 

@@ -53,7 +53,7 @@ body {
 }
 
 .nav a:hover {
-  background-color: #005f5f;
+  background-color: #6EBBC9;
 }
 
 .nav a.active {
@@ -81,3 +81,28 @@ body {
     width: 100%;
     background-color: brown;
   }
+  #homeSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9px;
+  }
+ .search{
+   height: 60px;
+   width: 350px;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   font-size: 35px;
+ }
+.addButton{
+  height: 64px;
+  width: 80px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 30px;
+  font-style: italic;
+  background-color: #878787;
+}
+.buttonText{
+  color: #6EBBC9;
+}

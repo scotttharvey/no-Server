@@ -1,6 +1,6 @@
 angular.module('app', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 
-$urlRouterProvider.otherwise('/');
+$urlRouterProvider.otherwise('/home');
 
 $stateProvider
 
@@ -10,6 +10,7 @@ $stateProvider
 
     controller: "homeCtrl"
 })
+
 .state('addy', {
   url: "/addy",
     controller: "addyCtrl",

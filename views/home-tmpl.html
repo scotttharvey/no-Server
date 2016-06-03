@@ -1,12 +1,13 @@
+<div class="carousel-container">
 
-  <div class="carousel-container">
+    <div class="add-remove" ng-repeat="photo in apiPhotos">
+        <img ng-src="{{photo.url}}" alt="" class="images" />
 
-  <div class="add-remove" ng-repeat="photo in apiPhotos">
-    <img ng-src="{{photo.url}}" alt="" class="images"/>
+    </div>
 
-  </div>
+</div>
+<section id="homeSearch">
+    <input class="search" placeholder="search"></input>
 
-  </div>
-  <div class="images">
-
-  </div>
+    <button class="addButton"><a ui-sref="addy"><span class="buttonText">Add</span></button>
+</section>

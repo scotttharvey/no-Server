@@ -1,10 +1,18 @@
 angular.module('app').controller('homeCtrl', function($scope, $state, service) {
 
     service.apiPhotos().then(function(response) {
-        console.log("hello", response);
         $scope.apiPhotos = response;
         return $scope.apiPhotos;
     });
+
+$scope.getPhotos = function(search){
+  console.log("pop");
+    service.randomPhotos(search).then(function(result) {
+        $scope.randomPhotos = result;
+        return $scope.randomPhotos;
+    });
+  }
+
 
     $scope.test = "You've done it for Home Control";
 

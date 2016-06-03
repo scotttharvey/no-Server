@@ -7,7 +7,10 @@
 
 </div>
 <section id="homeSearch">
-    <input class="search" placeholder="search"></input>
+  <div class="">
+    <input class="search" placeholder="search" ng-model="search"></input>
 
-    <button class="addButton"><a ui-sref="addy"><span class="buttonText">Add</span></button>
+    <button class="addButton" ng-click="getPhotos(search)"><span class="buttonText">Add</span></button>
+    
+  </div>
 </section>

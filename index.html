@@ -9,24 +9,16 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 </head>
-<body>
+<body ng-style="{'background-image': 'url({{randomPic}})'}">
   <header>
-  
+
     <append-me></append-me>
-    <!-- <div class="nav">
-      <ul>
-        <li class="home"><a ui-sref="home">Home</a></li>
-        <li class="about"><a ui-sref="smile">SMILE</a></li>
-        <li class="news"><a ui-sref="addy">Add</a></li>
-      </ul>
-    </div> -->
   </header>
+  <!-- <smile-directive ></smile-directive> -->
 
 
 
 <main role="main">
-
-
 
   <ui-view></ui-view>
 
@@ -45,6 +37,8 @@
     <script src="/js/smileCtrl.js"></script>
     <script src="/js/addyCtrl.js"></script>
     <script src="/js/append-directive.js"></script>
+    <script src="/js/smileDirective.js" charset="utf-8"></script>
+    <script src="/js/bodyCtrl.js"></script>
 
 </body>
 

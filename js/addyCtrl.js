@@ -3,9 +3,12 @@ angular.module('app').controller('addyCtrl', function($scope, service) {
       $scope.apiPhotos = response;
       return $scope.apiPhotos;
   });
+// $scope.removePhoto = function(picture){
+//   $scope.apiPhotos.
+// }
 
 $scope.addPhoto = function(picture) {
-  $scope.apiPhotos.unshift(picture);  
+  $scope.apiPhotos.unshift(picture);
 }
 
 $scope.getPhotos = function(search){
@@ -17,8 +20,11 @@ $scope.getPhotos = function(search){
 }
 
 
-  $scope.test = "You've done it for Home Control";
+  $scope.hidden = false;
 
+ $scope.showBox = function(){
+   $scope.hidden = false;
+ }
 
 
 

@@ -1,5 +1,3 @@
-angular.module('app').controller('smileCtrl', function($scope) {
-
-
-
+angular.module('app').controller('smileCtrl', function($scope, service) {
+  
 })

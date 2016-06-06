@@ -1,11 +1,11 @@
 angular.module("app").directive("mainDirective", function() {
     return {
         templateUrl: '/views/home-tmpl.html',
-        restric: "EA",
+        restrict: "EA",
         scope: {
 
         },
-        controller: function($scope) {
+        controller: function($scope, service) {
 
         },
         link: function(scope, element, attrs) {

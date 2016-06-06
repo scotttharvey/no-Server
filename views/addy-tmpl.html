@@ -1,6 +1,6 @@
 <div class="carousel-container">
 
-    <div class="add-remove" ng-repeat="photo in apiPhotos">
+    <div class="add-remove" ng-repeat="photo in apiPhotos track by $index">
         <img ng-src="{{photo.url}}" alt="" class="images" />
 
     </div>
@@ -16,9 +16,17 @@
 </section>
 <section class="photos-body">
 
-  <div ng-repeat="random in randomPhotos" ng-click="addPhoto(random)">
+  <div ng-repeat="random in randomPhotos" ng-click="addPhoto(random)" ng-Dblclick="removePhoto(random)">
+    <div class="images" ng-style="{'background-image': 'url({{random.url}})', 'background-size': 'cover'}">
 
-    <img ng-src="{{random.url}}" class="images" />
+      <!-- <img ng-src="{{random.url}}" alt="" class="images" /> -->
+
+      <div ></div>
+  <div ng-hide="hidden">
+
+  </div>
+
+    </div>
 
   </div>
 

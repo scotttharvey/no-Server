@@ -17,8 +17,9 @@ $stateProvider
 })
 .state('smile', {
   url: "/smile",
-    controller: "smileCtrl",
-    templateUrl: "/views/smile-tmpl.html"
+    // controller: "smileCtrl",
+    templateUrl: "/views/smile-tmpl.html",
+    resolve: {}
 })
 
 })

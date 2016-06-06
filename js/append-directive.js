@@ -1,7 +1,7 @@
 angular.module("app").directive("appendMe", function($document){
   return {
     templateUrl: '/views/navBar.html',
-    restric: "EA",
+    restrict: "EA",
     scope: {
       images: '=',
       item: '='

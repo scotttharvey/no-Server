@@ -22,7 +22,13 @@ angular.module('app').service('service', function($http) {
           return result.data.images;
         })
       }
+      this.oneRandomPhoto = function() {
 
+          return $http({
+              method: 'GET',
+              url: 'http://www.splashbase.co/api/v1/images/random'
+          })
+      };
 
 
 

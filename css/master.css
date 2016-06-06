@@ -3,17 +3,25 @@ html {
   padding: 0;
 }
 body {
-  background-color: #9CAA83;
+  /*background-image: url("{{randomPic}}");*/
   margin: 0;
   padding: 0;
 }
-#smile-body{
-  background-color:#2E3133; 
+.smile-body{
+  background-color:#2E3133;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+smile-directive img{
+  height: 80vh;
+  width: 100vw;
 }
 .carousel-container {
   width: 100vw;
   height: 17em;
-  /*border: red 2px solid;*/
   background-color: #2E3133;
   display: flex;
   align-items: center;
@@ -21,6 +29,10 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
+}
+
+.carousel-container div {
+  margin-left: 10px;
 }
 .carousel-container-home {
   width: 100vw;
@@ -47,9 +59,29 @@ body {
   height:12em;
   width: 12em;
   border-radius: 15px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
+  position: relative;
+  z-index: 0;
+  content: "stuff";
 
 }
+
+.photos-body div {
+  margin-top: 10px;
+}
+.images:hover{
+  z-index: 2;
+  height:12em;
+  width: 12em;
+  border-radius: 15px;
+  /*margin-left: 10px;*/
+  position: relative;
+  background-color: white;
+  opacity: .5;
+  border: solid #6EBBC9 thin;
+  content: attr("hi");
+}
+
 .nav ul {
   list-style: none;
   background-color: #444;

@@ -20,6 +20,8 @@ $scope.getPhotos = function(search){
 }
 
 
+$scope.showButton = false;
+
   $scope.hidden = false;
 
  $scope.showBox = function(){

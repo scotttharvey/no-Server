@@ -19,6 +19,13 @@ smile-directive img{
   height: 80vh;
   width: 100vw;
 }
+
+.main-background {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;;
+
+}
 .carousel-container {
   width: 100vw;
   height: 17em;
@@ -28,25 +35,43 @@ smile-directive img{
   overflow: scroll;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  opacity: 0.8;
 
 }
+
+.add-remove {
+  position: relative;
+}
+
+.photo-button {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 60%;
+  background: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+}
+
 
 .carousel-container div {
   margin-left: 10px;
 }
 .carousel-container-home {
   width: 100vw;
-  height: 25em;
+  height: 22em;
   /*border: red 2px solid;*/
   background-color: #2E3133;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: scroll;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: absolute;
   bottom: 0;
-
+  opacity: 0.8;
 }
 
 .carousel{
@@ -68,6 +93,7 @@ smile-directive img{
 
 .photos-body div {
   margin-top: 10px;
+
 }
 .images:hover{
   z-index: 2;
@@ -172,8 +198,7 @@ smile-directive img{
 .photos-body{
   display: flex;
   width: 100vw;
-  height: 35em;
-  /*border: red 2px solid;*/
+  height: auto;
   margin-top: 10px;
   background-color: #2E3133;
   border-radius: 20px;
@@ -183,6 +208,7 @@ smile-directive img{
   /*align-items: center;*/
   flex-wrap: wrap;
   overflow: scroll;
+  opacity: 0.9;
 }
 .photos-body img{
   margin: 20px;

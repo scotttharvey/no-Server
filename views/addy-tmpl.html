@@ -1,1 +1,27 @@
-asx
+<div class="carousel-container">
+
+    <div class="add-remove" ng-repeat="photo in apiPhotos track by $index" >
+        <img ng-src="{{photo.url}}" class="images" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"/>
+        <button class="photo-button" ng-click="removePhoto($index)" type="button" name="button" ng-hide='buttonhidden' ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"> Remove </button>
+
+    </div>
+
+</div>
+<section id="homeSearch">
+  <div class="search-bar">
+    <input class="search" placeholder="search" ng-model="search"></input>
+    <button class="addButton" ng-click="getPhotos(search)" >Search</button>
+
+  </div>
+</section>
+<section class="photos-body">
+
+  <div ng-repeat="random in randomPhotos" >
+    <div class="images" ng-mouseover="showButton = true"  ng-mouseleave="showButton = false"  ng-style="{'background-image': 'url({{random.url}})', 'background-size': 'cover'}">
+        <button class="photo-button" ng-click="addPhoto(random)" type="button" name="button" ng-show="showButton"> Add </button>
+
+    </div>
+
+  </div>
+
+</section>

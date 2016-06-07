@@ -1,16 +1,31 @@
 angular.module('app').controller('homeCtrl', function($scope, $state, service) {
 
-  service.kitShit().then(function (response){
-    console.log("hello?", response);
-    $scope.img = response;
-      $(".kitten-images").append($scope.img.data);
-  });
+    service.apiPhotos().then(function(response) {
+        $scope.apiPhotos = response;
+        return $scope.apiPhotos;
+    });
 
-  // $scope.imgtest = img;
+$scope.getPhotos = function(search){
+    service.randomPhotos($scope.search).then(function(result) {
+        $scope.randomPhotos = result;
+    });
+  }
+  $scope.addPhoto = function(picture) {
+    $scope.apiPhotos.unshift(picture);
+  }
+  $scope.removePhoto = function(i) {
+    $scope.apiPhotos.splice(i, 1);
+    // $scope.show = true;
+    console.log(i);
+  }
 
-  // console.log(img);
+  $scope.buttonhidden = true;
 
-  $scope.test = "You've done it for Home Control"
+  $scope.hidden = false;
+
+ $scope.showBox = function(){
+   $scope.hidden = false;
+ }
 
 
 

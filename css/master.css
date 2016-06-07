@@ -31,13 +31,14 @@ smile-directive img{
 .carousel-container {
   width: 100vw;
   height: 17em;
-  background-color: #2E3133;
+  /*background-color: #2E3133;*/
+  background: rgba(46, 49, 51, 0.7);
   display: flex;
   align-items: center;
   overflow: scroll;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  opacity: 0.7;
+  /*opacity: 0.7;*/
 
 }
 .homeText{
@@ -47,6 +48,10 @@ smile-directive img{
 }
 .sik{
   color: #66B2CC;
+  font-family: Pacifico;
+}
+.sikHead{
+  color: #fff;
   font-family: Pacifico;
 }
 
@@ -67,7 +72,7 @@ smile-directive img{
   z-index: 1000;
   border-color: silver;
   outline:none;
-  
+
 }
 .photo-button-smile {
   position: absolute;
@@ -94,7 +99,7 @@ smile-directive img{
   width: 100vw;
   height: 22em;
   /*border: red 2px solid;*/
-  background-color: #2E3133;
+  background-color: rgba(46, 49, 51, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,7 +109,7 @@ smile-directive img{
   border-bottom-right-radius: 10px;
   position: absolute;
   bottom: 0;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
 }
 
 .carousel{
@@ -203,36 +208,41 @@ smile-directive img{
     align-items: baseline;
   }*/
  .search{
-   height: 62px;
+   padding-top: 10px;
+   height: 49px;
    width: 350px;
    border: 1px solid #000;
    border-top-left-radius: 30px;
    border-bottom-left-radius: 30px;
-   font-size: 35px;
+   font-size: 37px;
+   font-family: Josefin Sans;
    outline: none;
    padding-left: 25px;
    align-items: baseline;
  }
 .addButton{
+  padding: 4px 0 3px 0;
   border: 1px solid #000;
   border-left: none;
-  height: 65px;
+  height: 61px;
   width: 130px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  font-size: 35px;
+  font-size: 30px;
   color: #37B4DD;
   font-style: oblique;
   background-color: #818787;
   outline:none;
   margin-left: -4px;
+  font-family: Pacifico;
+
 }
 .photos-body{
   display: flex;
   width: 100vw;
   height: auto;
   margin-top: 10px;
-  background-color: #2E3133;
+  background-color: rgba(46, 49, 51, 0.7);
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
@@ -240,7 +250,7 @@ smile-directive img{
   /*align-items: center;*/
   flex-wrap: wrap;
   overflow: scroll;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
 }
 .photos-body img{
   margin: 20px;

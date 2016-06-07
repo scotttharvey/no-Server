@@ -1,5 +1,5 @@
 angular.module('app').controller('addyCtrl', function($scope, service) {
-$scope.buttonhidden = true; 
+$scope.buttonhidden = true;
   // $scope.show = false;
   service.apiPhotos().then(function(response) {
       $scope.apiPhotos = response;
@@ -27,7 +27,12 @@ $scope.getPhotos = function(search){
   });
 }
 
+$scope.enterKeyM = function(e){
 
+   if (e.keyCode === 13){
+     $scope.getPhotos();
+   }
+ }
 
 
   $scope.hidden = false;

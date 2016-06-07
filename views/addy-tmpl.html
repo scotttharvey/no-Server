@@ -9,7 +9,7 @@
 </div>
 <section id="homeSearch">
   <div class="search-bar">
-    <input class="search" placeholder="search" ng-model="search"></input>
+    <input class="search" placeholder="search" ng-model="search" ng-keyup="enterKeyM($event)"></input>
     <button class="addButton" ng-click="getPhotos(search)" >Search</button>
 
   </div>

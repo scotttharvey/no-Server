@@ -1,28 +1,20 @@
 
 <section id="homeSearch">
   <div class="search-bar">
-    <input class="search" placeholder="search" ng-model="search"></input>
 
-    <button class="addButton" ng-click="getPhotos(search)">Search</button>
+    <input class="search" placeholder="search" ng-model="search"></input>
+    <button class="addButton" ng-click="getPhotos(search)" ui-sref="addy">Search</button>
 
   </div>
 </section>
 
-<h1>SMILES</h1>
 
 <div class="carousel-container-home">
 
     <div class="add-remove" ng-repeat="photo in apiPhotos">
-        <img ng-src="{{photo.url}}" alt="" class="images" />
+        <img ng-src="{{photo.url}}" alt="" class="images" ng-mouseover="showButton = true"  ng-mouseleave="showButton = false" />
+        <button class="photo-button" type="button" name="button" ng-show="showButton"> Remove </button>
+
 
     </div>
-
 </div>
-<!-- <section class="photos-body">
-
-  <div ng-repeat="random in randomPhotos">
-    <img ng-src="{{random.url}}" class="images" />
-
-  </div>
-
-</section> -->

@@ -1,7 +1,7 @@
 angular.module("app").directive("smileDirective", function(service){
   return {
         template:
-      '<img src="{{randomPic}}" ng-mouseover="showButton = true"  ng-mouseleave="showButton = false" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"/><button class="photo-button-smile" class="add-remove" type="button" name="button" ng-show="showButton" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"> Sik-Wit-It </button>',
+      '<img src="{{randomPic}}" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true" /><button class="photo-button-smile"  type="button" name="button" ng-hide="buttonhidden" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"><span> Sik-Wit-It</span> </button>',
     restric: "EA",
     scope: {
       anotherRandom: "&"
@@ -17,6 +17,21 @@ angular.module("app").directive("smileDirective", function(service){
       });
 
       })();
+      $scope.hidden = false;
+
+     $scope.showBox = function(){
+       $scope.hidden = false;
+     }
+     $scope.buttonhidden = true;
+     $scope.addPhoto = function(picture) {
+       $scope.apiPhotos.unshift(picture);
+     }
+     $scope.removePhoto = function(i) {
+       $scope.apiPhotos.splice(i, 1);
+       // $scope.show = true;
+       console.log(i);
+     }
+
 
 
     },

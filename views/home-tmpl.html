@@ -12,10 +12,9 @@
 
 <div class="carousel-container-home">
 
-    <div class="add-remove" ng-repeat="photo in apiPhotos">
-        <img ng-src="{{photo.url}}" alt="" class="images" ng-mouseover="showButton = true"  ng-mouseleave="showButton = false" />
-        <button class="photo-button" type="button" name="button" ng-show="showButton"> Remove </button>
+  <div class="add-remove" ng-repeat="photo in apiPhotos track by $index" >
+      <img ng-src="{{photo.url}}" class="images" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"/>
+      <button class="photo-button" ng-click="removePhoto($index)" type="button" name="button" ng-hide='buttonhidden' ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"> Remove </button>
 
 
     </div>
-</div>

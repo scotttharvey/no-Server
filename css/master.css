@@ -40,6 +40,15 @@ smile-directive img{
   opacity: 0.7;
 
 }
+.homeText{
+  font-size: 60px;
+  font-family: Josefin Sans;
+  color: #E8BD25;
+}
+.sik{
+  color: #66B2CC;
+  font-family: Pacifico;
+}
 
 .add-remove {
   position: relative;
@@ -55,7 +64,7 @@ smile-directive img{
   cursor: copy;
   color: #f8f8f8;
   font-size: 13px;
-  z-index: 100;
+  z-index: 1000;
   border-color: silver;
 }
 .photo-button-smile {
@@ -68,7 +77,7 @@ smile-directive img{
   cursor: copy;
   color: #bbb;
   font-size: 20px;
-  z-index: 10;
+  z-index: 10000;
 }
 
 
@@ -114,7 +123,7 @@ smile-directive img{
 
 }
 .images:hover{
-  z-index: 2;
+  z-index: 153;
   height:12em;
   width: 12em;
   border-radius: 15px;

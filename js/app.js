@@ -3,7 +3,6 @@ angular.module('app', ['ui.router']).config(function($stateProvider, $urlRouterP
 $urlRouterProvider.otherwise('/home');
 
 $stateProvider
-
 .state('home', {
   url: "/home",
   templateUrl: "/views/home-tmpl.html",
@@ -19,6 +18,5 @@ $stateProvider
   url: "/smile",
     templateUrl: "/views/smile-tmpl.html",
     resolve: {}
-})
-
+  })
 })

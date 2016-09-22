@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
 <head>
+  <script>
+    var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/sik';
+    var jsFiles = ["/js/app.js", "/js/addyCtrl.js", "/js/append-directive.js", "/js/bodyCtrl.js", "/js/homeCtrl.js", "/js/mainDirect.js", "/js/scripts.js", "/js/service.js", "/js/smileCtrl.js", "/js/smileDirective.js"]
+    var cssFiles = ["/css/reset.css", "/css/master.css"]
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.addEventListener('lastJsLoaded', function (e) {angular.bootstrap(document, ['app']);});
+      cssFiles.forEach(function(e){
+        loadjscssfile(e, "css");
+      })
+      jsFiles.forEach(function(e){
+        loadjscssfile(e, "js");
+      })
+    });
+    function loadjscssfile(filename, filetype) {
+             if (filetype === "js") {
+                 var fileref = document.createElement('script')
+                 fileref.setAttribute("type", "text/javascript")
+                 fileref.setAttribute("src", baseUrl + filename)
+                 document.getElementById("custom-inject").appendChild(fileref);
+             }
+             else if (filetype === "css") {
+                 var fileref = document.createElement("link")
+                 fileref.setAttribute("rel", "stylesheet")
+                 fileref.setAttribute("type", "text/css")
+                 fileref.setAttribute("href", baseUrl + filename)
+                 document.getElementsByTagName("head")[0].appendChild(fileref);
+             }
+           }
+  </script>
     <meta charset="utf-8">
     <title>SIK</title>
-    <link rel="stylesheet" href="/css/master.css">
-    <link rel="stylesheet" href="/css/reset.css">
+    <!-- <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/reset.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/> -->
 </head>
@@ -31,7 +60,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
     <!-- <script src="/js/scripts.js"></script> -->
-    <script src="/js/app.js"></script>
+    <!-- <script src="/js/app.js"></script>
     <script src="/js/service.js"></script>
     <script src="/js/mainDirect.js"></script>
     <script src="/js/homeCtrl.js"></script>
@@ -39,8 +68,8 @@
     <script src="/js/addyCtrl.js"></script>
     <script src="/js/append-directive.js"></script>
     <script src="/js/smileDirective.js" charset="utf-8"></script>
-    <script src="/js/bodyCtrl.js"></script>
-
+    <script src="/js/bodyCtrl.js"></script> -->
+    <span id="custom-inject"></span>
 </body>
 
 </html>

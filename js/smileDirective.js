@@ -38,3 +38,6 @@ angular.module("app").directive("smileDirective", function(service){
 
   }
 })
+
+var event = new Event('lastJsLoaded');
+document.dispatchEvent(event);

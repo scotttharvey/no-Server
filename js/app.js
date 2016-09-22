@@ -1,22 +1,23 @@
 angular.module('app', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 
 $urlRouterProvider.otherwise('/home');
+var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/sik';
 
 $stateProvider
 .state('home', {
   url: "/home",
-  templateUrl: "/views/home-tmpl.html",
+  templateUrl: baseUrl + "/views/home-tmpl.html",
     controller: "homeCtrl"
 })
 
 .state('addy', {
   url: "/addy",
     controller: "addyCtrl",
-    templateUrl: "/views/addy-tmpl.html"
+    templateUrl: baseUrl + "/views/addy-tmpl.html"
 })
 .state('smile', {
   url: "/smile",
-    templateUrl: "/views/smile-tmpl.html",
+    templateUrl: baseUrl + "/views/smile-tmpl.html",
     resolve: {}
   })
 })

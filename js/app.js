@@ -1,7 +1,7 @@
 angular.module('app', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 
 $urlRouterProvider.otherwise('/home');
-var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/sik';
+var baseUrl = /local|127/.test(window.location.hostname) ? '' : '/no-Server';
 
 $stateProvider
 .state('home', {

@@ -1,7 +1,7 @@
 angular.module("app").directive("smileDirective", function(service){
   return {
         template:
-      '<img src="{{randomPic}}" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true" /><button class="photo-button-smile"  type="button" name="button" ng-hide="buttonhidden" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"><span> Sik-Wit-It</span> </button>',
+      '<img src="{{randomPic}}" "ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true" /><button class="photo-button-smile"  type="button" name="button" ng-hide="buttonhidden" ng-mouseenter="buttonhidden = false" ng-mouseleave="buttonhidden = true"><span> Sik-Wit-It</span> </button>',
     restric: "EA",
     scope: {
       anotherRandom: "&"
